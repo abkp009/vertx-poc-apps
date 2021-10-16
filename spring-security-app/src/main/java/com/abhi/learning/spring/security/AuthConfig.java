@@ -69,7 +69,24 @@ public class AuthConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userName -> new MyUserDetails(userName));
+		// can configure hard coded user like below
+		//auth.userDetailsService(new User("userName", "password", enabled=true, accountNonExpired=true, credentialsNonExpired=true, accountNonLocked=true, authorities=ArrayList));
 	}
+	
+	/* LDAP authentication , out of the box impl., check application.yml and pom.xml for LDAP config.
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth
+		.ldapAuthentication()
+		.userDnPatterns("uid={0},ou=people")
+		.groupSearchBase("ou=groups")
+		.contextSource()
+		.url("ldap://localhost:8389/dc=springframework,dc=org")
+		.and()
+		.passwordCompare()
+		.passwordEncoder(getPasswordEncoder())
+		.passwordAttribute("userPassword");// from ldif file
+	}*/
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {

@@ -7,6 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+// TODO: this is hardcoded class, it should use JPA repository for user details 
 public class MyUserDetails implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
