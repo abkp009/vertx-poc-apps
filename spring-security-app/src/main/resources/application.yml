@@ -15,5 +15,7 @@ spring:
 #           ldif: "classpath:ldap-data.ldif"
 
 # App level custom properties
-#myapp: read from vm args of run configuration or system environment variable
+#read from vm args of run configuration or system environment variable
+myapp: 
 #   password: secret
+#    jwt.secret.key: ${myapp.password}
