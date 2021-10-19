@@ -1,20 +1,9 @@
 package com.abhi.learning.spring.security;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Function;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-
 @Service
-public class JwtUtil {
+public class JwtUtil {/*
 
 	@Value("${myapp.jwt.secret.key}")
 	private String secretKey;
@@ -56,4 +45,4 @@ public class JwtUtil {
 		final String username = extractUsername(token);
 		return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
 	}
-}
+*/}
