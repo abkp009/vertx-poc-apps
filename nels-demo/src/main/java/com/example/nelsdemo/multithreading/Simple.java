@@ -2,6 +2,7 @@ package com.example.nelsdemo.multithreading;
 
 import java.util.stream.IntStream;
 
+//lifecycle - start, stop,wait,notify,suspend,resume,yield,sleep
 public class Simple {
     public static void main(String[] args) {
         System.out.println("Creating thread");
