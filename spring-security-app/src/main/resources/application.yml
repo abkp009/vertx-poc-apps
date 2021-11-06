@@ -1,0 +1,21 @@
+server:
+   port: 8081
+spring:
+   application:
+      name: spring-security-app
+   security:
+      user:
+         name: userForInMemoryAuthentication
+         password: passForInMemoryAuthentication
+# uncomment for LDAP Authentication
+#   ldap:
+#      embedded:
+#          base-dn: dc=springframework,dc=org
+#           port: 8389
+#           ldif: "classpath:ldap-data.ldif"
+
+# App level custom properties
+#read from vm args of run configuration or system environment variable
+myapp: 
+#   password: secret
+#    jwt.secret.key: ${myapp.password}
